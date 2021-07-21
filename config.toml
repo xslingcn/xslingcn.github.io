@@ -1,0 +1,52 @@
+# Basic
+title = "Xsling's"
+baseURL = "https://xsl.sh"
+
+# Pagination
+paginate = 10
+paginatePath = "page"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    identifier = "home"
+    url = "https://xsl.sh/"
+    weight = 10
+
+[taxonomies]
+    tag = "tags"
+    
+[params]
+author = "Xsling"
+subtitle = ""
+description = "Oh What A World!"
+welcomeMessage = ""
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+coverColor = "red"
+
+[params.comment]
+disqus = ""
+duoshuo = ""
+
+[params.social]
+weibo = ""
+github = "xslingcn"
+twitter = ""
+gplus = ""
+mail = "xslingcn@gmail.com"
+
+[params.ga]
+ID = ""
+host = ""
+
+# The blog button should not be removed.
+[params.blogButton]
+title = "Blog"
+description = "Visit blog"
+
+[permalinks]
+posts = "/:year/:month/:title/"

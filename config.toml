@@ -1,6 +1,6 @@
 # Basic
 title = "Xsling's"
-baseURL = "https://vno-hugo.netlify.app/"
+baseURL = "https://xsl.sh/"
 
 # Pagination
 paginate = 10

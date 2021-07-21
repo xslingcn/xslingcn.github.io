@@ -5,7 +5,7 @@ title: "[论文笔记]Deep Learning for Image Super-resolution:A Survey - 1.Prob
 date: 2021-07-18T00:34:01+08:00
 draft: false
 ---
-*读一下这篇[Survey](https://arxiv.org/abs/1902.06068)，顺便做点阅读笔记，先从Introduction后的第一部分*Problem Setting And Terminology*开始：*
+*读一下这篇[Survey](https://arxiv.org/abs/1902.06068)，顺便做点阅读笔记，先从Introduction后的第一部分Problem Setting And Terminology开始：*
 ## 一些术语与定义
 - LR - Low-resolution；
 - HR - High-resolution；

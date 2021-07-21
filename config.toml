@@ -55,4 +55,4 @@ title = "Blog"
 description = "Visit blog"
 
 [permalinks]
-posts = "/:year/:month/:title/"
+posts = "/:year/:month/:filename/"

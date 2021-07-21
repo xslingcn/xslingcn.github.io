@@ -50,3 +50,13 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 });
+
+function setBackgroundImage(){
+  const jsdURL = "https://cdn.jsdelivr.net/npm/turna_assets@1.1.1/img/xsl.sh/"
+  var panelCover = document.getElementById("panel-cover");
+  var rndNum = Math.floor(Math.random() * 10).toString();
+  console.log(rndNum);
+  var destURL = jsdURL + rndNum + ".webp";
+  panelCover.setAttribute("style" ,"background-image: url('" + destURL + "')");
+
+}

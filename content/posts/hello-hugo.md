@@ -2,7 +2,7 @@
 layout: post
 tags: ["杂谈"]
 title: "Hello Hugo"
-date: 2021-02-17T22:35:55+08:00
+date: 2021-07-22T04:35:55+08:00
 draft: false
 ---
 ## Hello Hugo

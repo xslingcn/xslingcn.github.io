@@ -1,6 +1,7 @@
 # Basic
-title = "Xsling's"
-baseURL = "https://xsl.sh"
+title = "Vno Hugo"
+baseURL = "https://vno-hugo.netlify.app/"
+theme="vno-hugo"
 
 # Pagination
 paginate = 10
@@ -11,37 +12,37 @@ paginatePath = "page"
 
 [menu]
   [[menu.main]]
-    name = "首页"
-    identifier = "home"
-    url = "https://xsl.sh/"
+    name = "Projects"
+    identifier = "projects"
+    url = "http://project.onevcat.com/"
     weight = 10
 
 [taxonomies]
     tag = "tags"
     
 [params]
-author = "Xsling"
-subtitle = ""
-description = "Oh What A World!"
-welcomeMessage = ""
+author = "onevcat"
+subtitle = "A blog-orientation theme for Hugo"
+description = "Vno Hugo is a port of Vno Jekyll."
+welcomeMessage = "Oh What a World"
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = "red"
 
 [params.comment]
-disqus = ""
+disqus = "vno-hugo"
 duoshuo = ""
 
 [params.social]
-weibo = ""
-github = "xslingcn"
-twitter = ""
-gplus = ""
-mail = "xslingcn@gmail.com"
+weibo = "onevcat"
+github = "onevcat"
+twitter = "onevcat"
+gplus = "107108267983477358170"
+mail = "onev@onevcat.com"
 
 [params.ga]
-ID = ""
-host = ""
+ID = "your_ga_id"
+host = "your_host"
 
 # The blog button should not be removed.
 [params.blogButton]

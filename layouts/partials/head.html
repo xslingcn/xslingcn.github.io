@@ -30,9 +30,9 @@
     {{ template "_internal/twitter_cards.html" . }}
 
     <!-- Style -->
+    <link href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{$styles.Data.Integrity}}" crossorigin="anonymous" media="screen">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     
 
     {{ if .Site.Params.useDisqusJS }}

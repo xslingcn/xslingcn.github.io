@@ -40,6 +40,16 @@
       </a>
     </li>
     {{ end }}
+
+    {{ if  .Site.Params.social.telegram }}
+    <!-- Telegram -->
+    <li class="navigation__item">
+      <a href="https://t.me/{{ .Site.Params.social.telegram}}" rel="author" title="Telegram" target="_blank">
+        <i class='social fa fa-telegram'></i>
+        <span class="label">Google Plus</span>
+      </a>
+    </li>
+    {{ end }}
   
     <!-- RSS -->
     <li class="navigation__item">

@@ -159,6 +159,12 @@
   @include linear-gradient(140deg, rgba($slate,.6) 20%, rgba(darken($slate, 20%),.8));
 }
 
+.cover-xsling{
+  background-color: rgba(8, 240, 221, 0);
+  background-image: -webkit-linear-gradient(-410deg, rgba(153, 153, 160, 0.507) 20%, rgba(50, 55, 56, 0.788));
+  background-image: linear-gradient(140deg, rgba(153, 153, 160, 0.507) 20%, rgba(50, 55, 56, 0.788));
+}
+
 .cover-disabled {
   background: none;
 }

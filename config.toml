@@ -31,6 +31,12 @@ coverColor = "xsling"
 disqus = ""
 duoshuo = ""
 
+[params.comment.gitalk]
+ID = "e17d0f1ab112597fb8de"
+secret = "e20ffe588164e17e803852fde3dbad2a3a1200c3"
+repo = "xslingcn.github.io"
+owner = "xslingcn"
+
 [params.social]
 weibo = ""
 github = "xslingcn"

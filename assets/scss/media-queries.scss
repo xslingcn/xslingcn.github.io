@@ -277,10 +277,20 @@
     .read-more-item-dim {
         color: darken($primary-color,10%);
     }
+    .gt-container a {
+        color: darken($primary-color,10%);
+    }
+    .gt-container a:hover {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+    .gt-container a.is--active{
+        color: $secondary-color-dark;
+    }
     .gt-container .gt-header-textarea {
         background-color: #1C2128;
     }
-    .gt-container .gt-header-textarea {
+    .gt-container .gt-header-textarea:hover {
         background-color: lighten(#1C2128, 20%);
     }
     .gt-container .gt-user .gt-ico svg {
@@ -299,22 +309,33 @@
     .gt-container .gt-link:hover{
         color: $primary-color;
     }
+    .gt-container .gt-popup{
+        background: $primary-color-dark;
+    }
     .gt-container .gt-btn {
-        border: 1px solid $primary-color-dark;
-        background-color: #1C2128;
-        color: darken($primary-color,10%);
+        border: 1px solid rgba(205,217,229,0.1);
+        background-color: #347d39;
+        color: #FFF;
     }
     .gt-container .gt-btn:hover{
-        color: $primary-color;
-        background-color: #2D333B;
-        border: 1px solid lighten($primary-color-dark, 10%);
+        color: #FFF;
+        background-color: #347d39;
+        border: 1px solid rgba(205,217,229,0.1);
     }
     .gt-container .gt-btn-preview{
-        background-color: #1C2128;
-        color: darken($primary-color,10%);
+      background-color: #373E47;
+      color: $secondary-color-dark;
+      border-color: 1px solid rgba(205,217,229,0.1);
     }
     .gt-container .gt-btn-preview:hover{
-        background-color: #2D333B;
-        border: 1px solid lighten($primary-color-dark, 10%);
+      background-color: #444C56;
+      color: $secondary-color-dark;
+      border: 1px solid #768390;
+    }
+    .gt-container .gt-header-controls-tip {
+      color: darken($primary-color,10%);
+    }
+    .gt-container .gt-header-controls-tip:hover{
+      color: $primary-color;
     }
 }

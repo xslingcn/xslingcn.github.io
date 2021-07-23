@@ -219,13 +219,13 @@
       color: darken($primary-color,10%);
     }
     a:hover {
-        color: darken($secondary-color,10%);
+        color: $primary-color;
     }
     .post-list__post-title a {
         color: $secondary-color-dark;
     }
     .post-list__post-title a:hover {
-        color: darken($secondary-color,10%);
+        color: $primary-color;
     }
     .post-list__divider {
         border-top: 1px solid #373E47;
@@ -286,17 +286,27 @@
     .gt-container .gt-user .gt-ico svg {
         fill: $secondary-color-dark;
     }
-    .gt-container a {
-        color: $primary-color-dark;
+    .gt-container .gt-no-init a{
+      color: darken($primary-color,10%);
+    }
+    .gt-container .gt-no-init a:hover{
+      color: $primary-color;
     }
     .gt-container .gt-link{
         border-bottom: 1px dotted $primary-color-dark;
+        color: darken($primary-color,10%);
+    }
+    .gt-container .gt-link:hover{
+        color: $primary-color;
     }
     .gt-container .gt-btn {
         border: 1px solid $primary-color-dark;
         background-color: #1C2128;
         color: darken($primary-color,10%);
     }
+    .gt-container .gt-btn:hover{
+      color: $primary-color;
+  }
     .gt-container .gt-btn-preview{
         background-color: #1C2128;
         color: darken($primary-color,10%);

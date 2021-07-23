@@ -277,10 +277,10 @@
     .read-more-item-dim {
         color: darken($primary-color,10%);
     }
-    .gt-header-textarea {
+    .gt-container .gt-header-textarea {
         background-color: #1C2128;
     }
-    .gt-header-textarea:hover {
+    .gt-container .gt-header-textarea {
         background-color: lighten(#1C2128, 20%);
     }
     .gt-container .gt-user .gt-ico svg {
@@ -305,10 +305,16 @@
         color: darken($primary-color,10%);
     }
     .gt-container .gt-btn:hover{
-      color: $primary-color;
-  }
+        color: $primary-color;
+        background-color: #2D333B;
+        border: 1px solid lighten($primary-color-dark, 10%);
+    }
     .gt-container .gt-btn-preview{
         background-color: #1C2128;
         color: darken($primary-color,10%);
+    }
+    .gt-container .gt-btn-preview:hover{
+        background-color: #2D333B;
+        border: 1px solid lighten($primary-color-dark, 10%);
     }
 }

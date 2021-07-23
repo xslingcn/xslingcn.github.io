@@ -293,6 +293,9 @@
     .gt-container .gt-header-textarea:hover {
         background-color: lighten(#1C2128, 20%);
     }
+    .gt-container .gt-svg svg{
+      fill: $secondary-color-dark;
+    }
     .gt-container .gt-user .gt-ico svg {
         fill: $secondary-color-dark;
     }
@@ -311,6 +314,7 @@
     }
     .gt-container .gt-popup{
         background: $primary-color-dark;
+        border: 1px solid rgba(205,217,229,0.1);
     }
     .gt-container .gt-btn {
         border: 1px solid rgba(205,217,229,0.1);
@@ -323,12 +327,12 @@
         border: 1px solid rgba(205,217,229,0.1);
     }
     .gt-container .gt-btn-preview{
-      background-color: #373E47;
+      background-color: #1C2128;
       color: $secondary-color-dark;
       border-color: 1px solid rgba(205,217,229,0.1);
     }
     .gt-container .gt-btn-preview:hover{
-      background-color: #444C56;
+      background-color: #22272E;
       color: $secondary-color-dark;
       border: 1px solid #768390;
     }

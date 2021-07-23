@@ -75,7 +75,7 @@
       background-color: #1C2128;
     }
     .gt-header-textarea:hover {
-      background-color: lighten(#1C2128, 20%);
+      background-color: #2D333B;
     }
     .gt-header-preview {
       border: 1px solid rgba(205,217,229,0.1);
@@ -129,5 +129,19 @@
     }
     .gt-header-controls-tip:hover{
       color: $primary-color;
+    }
+    .gt-comment-username{
+      color: darken($primary-color,10%);
+    }
+    .gt-comment-admin .gt-comment-content{
+      background-color: #22272E;
+      border: 1px solid darken($primary-color,10%);
+    }
+    .gt-comment-content:hover {
+      -webkit-box-shadow: 0 0.625em 3.75em 0 #373e48;
+              box-shadow: 0 0.625em 3.75em 0 #373e48;
+    }
+    .gt-comment-body {
+      color: $secondary-color-dark;
     }
   }

@@ -277,4 +277,28 @@
     .read-more-item-dim {
         color: darken($primary-color,10%);
     }
+    .gt-header-textarea {
+        background-color: #1C2128;
+    }
+    .gt-header-textarea:hover {
+        background-color: lighten(#1C2128, 20%);
+    }
+    .gt-container .gt-user .gt-ico svg {
+        fill: $secondary-color-dark;
+    }
+    .gt-container a {
+        color: $primary-color-dark;
+    }
+    .gt-container .gt-link{
+        border-bottom: 1px dotted $primary-color-dark;
+    }
+    .gt-container .gt-btn {
+        border: 1px solid $primary-color-dark;
+        background-color: #1C2128;
+        color: darken($primary-color,10%);
+    }
+    .gt-container .gt-btn-preview{
+        background-color: #1C2128;
+        color: darken($primary-color,10%);
+    }
 }

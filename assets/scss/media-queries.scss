@@ -277,6 +277,12 @@
     .read-more-item-dim {
         color: darken($primary-color,10%);
     }
+    textarea{
+      color: $secondary-color-dark;
+    }
+    .markdown-body {
+      color: $secondary-color-dark;
+    }
     .gt-container a {
         color: darken($primary-color,10%);
     }
@@ -287,11 +293,18 @@
     .gt-container a.is--active{
         color: $secondary-color-dark;
     }
+    .gt-container a.is--active:hover{
+        color: $secondary-color-dark;
+    }
     .gt-container .gt-header-textarea {
         background-color: #1C2128;
     }
     .gt-container .gt-header-textarea:hover {
         background-color: lighten(#1C2128, 20%);
+    }
+    .gt-container .gt-header-preview {
+      border: 1px solid rgba(205,217,229,0.1);
+      background-color: #1C2128;
     }
     .gt-container .gt-svg svg{
       fill: $secondary-color-dark;

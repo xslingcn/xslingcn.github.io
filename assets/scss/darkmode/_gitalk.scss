@@ -1,20 +1,48 @@
 .markdown-body {
     color: $secondary-color-dark;
-    .pl-md,.pl-mi1,.pl-mc,hr,table tr,table tr:nth-child(2n),img,code,pre{
+    .pl-md,.pl-mi1,.pl-mc,img,pre,.highlight pre{
       background-color: $primary-color-dark;
     }
-    hr,table td{
-      border-bottom: 1px solid #444C56;
+    table {
+      display: block;
+      width: 100%; 
+      width: max-content;
+      max-width: 100%;
+      overflow: auto;
+      th,
+      td {
+        padding: 6px 13px;
+        border: 1px solid #444C56;
+      }
+      tr {
+        background-color: $primary-color-dark;
+        border-top: 1px solid #373e47;
+        &:nth-child(2n) {
+          background-color: #2d333b;
+        }
+      }
+      img {
+        background-color: transparent;
+      }
     }
-    h1,h2,table tr{
+    hr,h1,h2,table tr{
       border-bottom: 1px solid #373e47;
+    }
+    hr{
+      background-color: #444c56;
     }
     h6{
       color: lighten($secondary-color-dark, 5%)
     }
     blockquote{
-      color: lighten($secondary-color-dark, 5%);
+      color: #768390;
       border-left: 0.25em solid #444C56;
+    }
+    code{
+      background-color: rgba(99,110,123,0.4);
+      border-radius: 6px;
+      border: 0;
+      padding: .2em .4em;
     }
     kbd{
       background-color: #2D333B;

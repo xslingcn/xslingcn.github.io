@@ -46,8 +46,7 @@ telegram = "Xsling"
 mail = "me@xsl.sh"
 
 [params.ga]
-ID = ""
-host = ""
+ID = "G-DLFBF98Y4Z"
 
 # The blog button should not be removed.
 [params.blogButton]

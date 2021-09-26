@@ -23,7 +23,8 @@
 
     videoEl.addEventListener('canplay', function () {
       panelCover.style.backgroundImage = 'none';
-      videoEl.play;
+      videoEl.muted = true;
+      videoEl.play();
     })
   
     videoEl.addEventListener('ended', function () {

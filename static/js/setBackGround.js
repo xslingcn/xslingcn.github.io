@@ -10,8 +10,8 @@
 
     var videoEl = document.createElement('video');
     videoEl.setAttribute('class', 'background-video');
-    videoEl.setAttribute('autoplay', '');
-    videoEl.setAttribute('muted', '');
+    videoEl.setAttribute('autoplay', 'autoplay');
+    videoEl.setAttribute('muted', 'muted');
 
     var source = document.createElement('source');
     source.setAttribute('src', 'https://cdn.jsdelivr.net/npm/turna_assets@1.1.5/video/xsl.sh/ottoai.webm');

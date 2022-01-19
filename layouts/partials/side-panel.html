@@ -1,4 +1,4 @@
-<header id="panel-cover" class="panel-cover {{if or (eq .Params.layout "post") (eq .Params.layout "page")}} panel-cover--collapsed {{end}}">
+<header id="panel-cover" class=" {{ if .IsHome }} panel-cover {{ else }} panel-cover panel-cover--collapsed {{ end }}">
   <script type="text/javascript" src="/js/setBackGround.js"></script>
     <div class="panel-main">
       <div class="panel-main__inner panel-inverted">

@@ -30,9 +30,8 @@
       </a>
     </li>
     {{ end }}
-  
-    {{ if  .Site.Params.social.gplus }}
-        {{ if  .Site.Params.social.linkedin }}
+
+    {{ if  .Site.Params.social.linkedin }}
     <!-- Linkedin -->
     <li class="navigation__item">
       <a href="https://www.linkedin.com/in/{{ .Site.Params.social.linkedin}}" title="@{{ .Site.Params.social.linkedin}}" target="_blank">
@@ -41,7 +40,8 @@
       </a>
     </li>
     {{ end }}
-
+  
+    {{ if  .Site.Params.social.gplus }}
     <!-- Google Plus -->
     <li class="navigation__item">
       <a href="https://plus.google.com/{{ .Site.Params.social.gplus}}" rel="author" title="Google+" target="_blank">

@@ -33,12 +33,12 @@
       </script>
     {{ end }}
 
-    {{ if .Site.Params.comment.gitalk.ID }}
+    {{ if .Site.Params.comment.gitalk.enabled }}
         <div id="gitalk-container">
             <script>
                 var gitalk = new Gitalk({
-                    clientID: '{{ .Site.Params.comment.gitalk.ID }}',
-                    clientSecret: '{{ .Site.Params.comment.gitalk.secret }}',
+                    clientID: '{{ os.Getenv "HUGO_GITALK_CLIENT_ID" }}',
+                    clientSecret: '{{ os.Getenv "HUGO_GITALK_CLIENT_SECRET" }}',
                     repo: '{{ .Site.Params.comment.gitalk.repo }}',
                     owner: '{{ .Site.Params.comment.gitalk.owner }}',
                     admin: ['{{ .Site.Params.comment.gitalk.owner }}'],

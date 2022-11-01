@@ -1,12 +1,12 @@
 (function(){
   var panelCover = document.getElementById("panel-cover");
-  var backgroundImgae = document.createElement("img");
-  backgroundImgae.setAttribute("class", "background-image");
-  backgroundImgae.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.8/img/xsl.sh/10.webp");
-  // backgroundImgae.setAttribute("src", "./video/0.webp");
 
   if (location.pathname === "/" && !location.hash) {
-    panelCover.setAttribute("style", "background-image: url('https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/img/xsl.sh/ottoai.webp')");
+    // panelCover.setAttribute("style", "background-image: none");
+
+    var backgroundImgEl = document.createElement("img");
+    backgroundImgEl.setAttribute("class", "background-image");
+    backgroundImgEl.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/img/xsl.sh/1.webp");
 
     var videoEl = document.createElement("video");
     videoEl.setAttribute("class", "background-video");
@@ -17,24 +17,31 @@
     source.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/video/xsl.sh/ottoai.webm");
     source.setAttribute("type", 'video/webm;codecs="vp8, vorbis"');
 
+    panelCover.insertBefore(backgroundImgEl, panelCover.firstChild);
+
     panelCover.appendChild(videoEl);
     videoEl.appendChild(source);
-    videoEl.play;
 
     videoEl.addEventListener("canplay", function () {
-      panelCover.style.backgroundImage = "none";
       videoEl.muted = true;
+
       videoEl.play();
+      panelCover.removeChild(backgroundImgEl);
     });
 
     videoEl.addEventListener("ended", function () {
-      panelCover.style.backgroundImage = "none";
+      backgroundImgEl.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/img/xsl.sh/10.webp");
+      panelCover.insertBefore(backgroundImgEl, panelCover.firstChild);
       panelCover.removeChild(videoEl);
-      panelCover.insertBefore(backgroundImgae, panelCover.firstChild);
     });
-    return;
+  } else {
+    var backgroundImgEl = document.createElement("img");
+    backgroundImgEl.setAttribute("class", "background-image");
+    backgroundImgEl.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/img/xsl.sh/10.webp");
+    panelCover.insertBefore(backgroundImgEl, panelCover.firstChild);
   }
-  panelCover.insertBefore(backgroundImgae, panelCover.firstChild);
+  panelCover.removeChild(document.getElementById("background-animator"));
+
 }());
 
 // window.onload=function(){

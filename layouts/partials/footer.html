@@ -1,6 +1,6 @@
 <section class="footer">
     <footer>
-        <span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></span>
-        <span class="footer__copyright">由 <a href="https://gohugo.io/">Hugo</a> 于 {{ now.Format "2006-01-02" }} 生成，以<a href="https://github.com/xslingcn/vno-hugo"> Vno - Hugo </a>为主题</span>
+        <span class="footer__copyright">{{ T "license" . | safeHTML }}</span>
+        <span class="footer__copyright">{{ i18n "poweredBy" (now.Format "2006-01-02") | safeHTML }}</span>
     </footer>
 </section>

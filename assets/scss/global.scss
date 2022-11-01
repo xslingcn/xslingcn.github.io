@@ -118,6 +118,12 @@ blockquote {
 // BASIC STYLING
 // ------------------------------
 
+// modify to add image caption
+img + em {
+  display: block; 
+  text-align: center;
+}
+
 ol, ul {
   margin: 0 0 1.3em 2.5em;
 

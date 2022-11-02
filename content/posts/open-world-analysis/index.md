@@ -9,6 +9,10 @@ resources:
   src: 0001.png
 - alt: The sales data of GTA V
   src: 0002.png
+- alt: Stock market in GTA V
+  src: 0003.png
+- alt: A sample of the map in GTA V
+  src: 0004.png  
 ---
 
 ## Introduction
@@ -36,11 +40,17 @@ Take a look at Grand Theft Auto V first, having “nearly 170 million units sold
 
 The game is staged in a fictional version of Los Angeles – Los Santos. In the game, players can play as three distinctive characters – a middle-aged con man struggling to escape his past for a decent living, a young gangster from downtown, seduced by the prospect of greater achievements, and a psychopath who lives on drug deals and bloody violence – and freely switch between them, a black-comedy plotline just flit between the main characters’ daily lives.
 
-As a major feature of open-world, players have full control over the behavior of the character while playing. No need to chase a given goal, they can grab a cup of coffee, drive to the observatory or just wander the streets. The game designers put great work to maximize the immersive experience created by such freedom. From the perspective of simulation, the game silently operates a bunch of complex systems based on reality rules, ranging from the weather, finance, television and radio to an abundant set of vehicles and firearms, naturally and correctly responding NPCs (non-player character) and a whole mechanism of police force, etc. And from the perspective of reflection, the plot and side quests jointly propose an intelligent and hilarious satires on the absurd, bestial, and hypocritical clip of contemporary (when it’s released) American society. The strong power of narrative stabs the audiences, and such pain in turn makes them relate the game even more to reality.
+In this game, the composers focused on aspect of realistic when creating an immersive experience. The game silently operates a bunch of complex systems based on reality rules, from macro ones like the weather, finance, medias， traffic and internet to an abundant set of vehicles and firearms, lots of NPCs (non-playable character) that are capable to react to the player's behaviors naturally and appropriately, and a whole police department, etc. By constantly interacting with these systems, players feel the vitality of this virtual world and thus develop more empathy.
 
-It’s no hard to find out why the game designers pursue such “maximum immersing”. As the audience of games, the players, with the main purpose of entertainment while playing, are expecting a short escape from the real world, and the more immersive the experience is, the more effective is the game rhetorically. GTA V indeed nailed it, offering tremendous amount of possibilities and details to make players feel as if they’re really living in Los Santos. Besides experiencing the well-written stories, players got options like tennis, golf, hunting, diving, triathlon, racing, stock trading, etc. to explore every corner of Los Santos while trying a bunch of mini games.
+![Stock market GTA V](0003.png)*The in-game stock market (Smith)*
 
-The story is definitely an option though. The key NPCs are located in various locations on the map, players can simply go meet them to start the quests. This method has in fact become a common standard of triggering quests adopted by GTA V's successors.
+On the other hand, the plot and side quests jointly proposed an intelligent and hilarious satires on an absurd, bestial, and hypocritical part of contemporary (when it’s released) society through deliberate game design. For example, there was a mission where Mike – the middle-aged con man –  was tasked to sneak into LifeInvader, a company operating a social network with a billion users. In this elaborate scene, players can find satirical elements about how tech companies abuse user data and violate user privacies, and hear buffoonery conversations between NPCs about business competition and marketing. The strong power of narrative stabs the audiences, and such pain in turn makes them relate and relect more to reality.
+
+The virtual world is also quite close in scale to a real city for the player. It takes time to travel in the virtual city no matter via walking, driving or flying. Additionally, the city is filled with a variety of events and special locations, allowing players constantly find something interesting while hanging around. Besides a big amount of side quests and random missions, players got options like tennis, golf, hunting, diving, triathlon, racing, vehicle modification, etc in these special locations. The enriched world building makes the world setting more persuasive.
+
+![A sample of the map in GTA V](0004.png)*Map with markers*
+
+All these factors combined make GTA V extremely effective and successful in creating an immersive gaming experience. This is exactly why it is beloved and enjoyed by players after ten years from its release. Its practice of indicating special locations and pending quests by placing markers on the map actually became a common standard within the genre and gets widely adopted by its successors.
 
 ## The Legend of Zelda: Breath of the Wild
 
@@ -71,6 +81,8 @@ Take-Two Interactive. “Investor Presentation - August 2022.” *Q1 2023 Take-T
 
 IGN. “Verdict.” *The Legend of Zelda: Breath of the Wild Review*, 2 Mar. 2017, <https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review>.
 
-Duncan, S. C. 2011. *Minecraft beyond construction and survival. Well Played 1(1)*. 1-22. Retrieved from <http://etc.cmu.edu/etcpress>.
+Duncan, S. C. *Minecraft beyond construction and survival. Well Played 1(1)* 1-22, 2011, <http://etc.cmu.edu/etcpress>.
 
 Codex Gamicus. “History.” *Open-World Video Games*, <https://gamicus.fandom.com/wiki/Open-world_video_games#History>.
+
+Smith, Josh. *GTA 5 Stock Market Pump and Dump Scheme Promises Fast Cash.* 1 Oct. 2013, <https://www.gottabemobile.com/gta-5-stock-market-pump-dump-scheme-promises-fast-cash/>.

@@ -24,7 +24,7 @@ resources:
 ## Introduction
 
 ***
-Video games, as a cultural carrier and art form that is being increasingly indispensable in modern entertainment, have gone and are still going through a unique and rich path of development. In the short history of less than a hundred years, a variety of game genres and implementations have emerged. And the open-world game, one of which genres are quite popular and of mainstay today, has flourished ever since it was defined, and evolved out of the continuous innovation of the industry and players, along with the birth of many video game classics.
+Video games, as a cultural carrier and art form that is being increasingly important in modern entertainment, have gone and are still going through a rapid and unique process of development. In the short history of less than a hundred years, a variety of game genres and implementations have emerged. The open-world game, one of which genres are quite popular and of mainstay today, has flourished ever since it was defined, and evolved out of the continuous innovation of the industry and players, along with the birth of many video game classics.
 
 ![The roots and development of Open-world games](0001.png)*The roots and development of Open-world games (Codex Gamicus)*
 
@@ -40,7 +40,7 @@ In terms of genre, although there may be common parts that the three samples cle
 
 ## Grand Theft Auto V
 
-Take a look at Grand Theft Auto V first, having “nearly 170 million units sold-in to date” and being the “best-selling game of the past 10 years in the U.S.” (Take-Two Interactive 10), it has been made a sort of cultural symbol representing all video games by gaining epic success and enormous popularity. What has made it topped among all the AAA (high-budget, high-profile) games with incredible vitality is undoubtedly its groundbreaking game design, particularly, its open-world game design.
+Having “nearly 170 million units sold-in to date” and being the “best-selling game of the past 10 years in the U.S.” (Take-Two Interactive 10), Grand Theft Auto V (GTA V) has been made a sort of cultural symbol representing all video games by gaining epic success and enormous popularity. What has made it topped among all the AAA (high-budget, high-profile) games with incredible vitality is undoubtedly its groundbreaking game design, particularly, its open-world game design.
 
 ![The sales data of GTA V](0002.png)*The impressive sales score of GTA V (Take-Two Interactive 10)*
 
@@ -64,11 +64,11 @@ Widely awarded, highly regarded, and considered a masterclass (IGN), The Legend 
 
 As the open-world game evolves, a cost-effective but annoying trend emerged. Instead of spending time and money adding details and polishing gameplay, game designers begin to fill the game with more mass-produced side quests to ensure the size of the game content. These side quests are extremely similar in structure, centering on minor random characters, and have only negligible impact on the main plot.  Players soon get tired of the list of question marks and lose their enthusiasm for playing. From a rhetorical point of view, the immersion is broken since the entertaining-oriented exploration gets replaced by a heavy to-do list, thus the expression is no longer effective and audiences tend to refuse to accept.
 
-BotW got rid of all the question marks as well as those meaningless side quests. Players are told an ultimate goal at the beginning of the game, and beyond that players have nearly unlimited freedom to explore, treasure hunt, combat, unlock abilities, get upgrades, and trigger plots in a huge fantasy world. Players don't gain pleasure from completing given tasks, but from exploring the world and solving puzzles. Although there are no explicit instructions, some deliberate game designs (e.g. natural regional divisions made by different geographical features) usually make players progress the game in ways the designers would expect. On top of that, the explorable game content is abundant enough so that players do not feel lost.
+BotW got rid of all the question marks as well as those tiredsome side quests. Players are told an ultimate goal at the beginning of the game, which is to fight a evil, powerful and long-reign monster and bring back the kidnapped princess. Beyond that, players have nearly unlimited freedom to explore, treasure hunt, combat, unlock abilities, get upgrades, and trigger plots in a huge fantasy world. Players don't gain pleasure from completing given tasks, but from exploring the world and solving puzzles. Although there are no explicit instructions, some deliberate game designs (e.g. natural regional divisions made by different geographical features) usually make players progress the game in ways the designers would expect. On top of that, the explorable game content is abundant enough so that players do not feel lost.
 
-![Explorable places of BotW marked on the map](0005.png)*Abundant explorable resources (marks shown after exploration) (Sneezes)*
+![Explorable places of BotW marked on the map](0005.png)*Abundant explorable resources (marks shown after completed) (Sneezes)*
 
-Meanwhile, BotW grants players great freedom in terms of how to play the game. Unlike some that'd set rigid difficulty gaps to create fixed game progression order, BotW encourages players to apply creative thinking to whatever they have at the moment to work out the puzzle, and once they try, they will likely get rewarded. So when players play, there is no mandatory order to follow; instead, they follow pure curiosity to explore and have fun. This intuitive gaming manner outputs great experiences by valuing the player's subjective will, making it easier for audiences to feel immersed when they act on their own and are not constrained too much.
+Meanwhile, BotW grants players great freedom in terms of how to play the game. Unlike some that'd set rigid difficulty gaps to create fixed game progression order, BotW encourages players to apply creative thinking to whatever they have at the moment to work out the puzzle, and once they try, they will likely get rewarded. The same applies when players encounter combats. So when players play, there is no mandatory order to follow; instead, they follow pure curiosity to explore and have fun. This intuitive gaming manner outputs great experiences by valuing the player's subjective will, making it easier for audiences to feel immersed when they act on their own thoughts and are not constrained too much.
 
 ![The non-linear progression structure of BotW](0006.png)*The non-linear progression structure of BotW (Savant)*
 
@@ -78,7 +78,9 @@ By presenting an innovative game design, BotW has explored a new path of open-wo
 
 And in terms of leaving room for players' creativity and giving freedom, Minecraft has gone to an undoubted pinnacle. In Minecraft, players are spawned in a randomly generated world. The only and most important rule is that the game is over whenever the player dies, and everything else is left to the player to explore and create. No plot, no ultimate goal, and even no ending point. This infinite world will continue to exist in infinite time, as long as the player is still playing, there would be infinite possibilities.
 
-In order to survive, players would quickly find that they would need to eat, sleep, hunt and fight mobs, etc. It is creating immersive experiences, though in a casual way. Such immersion changes as players build houses, establish strongholds and villages, farm, and tame and breed... This sense of achievement of building everything from scratch would gradually strengthen the immersion.
+But this game is not all about creation. The composers are well aware that players can get into "boredom". So "in order to build immersion in the game" and “reflect a bouncing between the boredom of construction and the anxiety of survival” (Duncan), Minecraft is filled with abundant survival elements.
+
+To survive, players would quickly find that they need to eat, sleep, hunt and fight mobs, etc. An immersion emerges as a player builds a house, establishes strongholds and villages, begins to cultivate, tame and breed, etc. A sense of achievement of building everything from scratch would consistently strengthen such immersion.
 
 ![Farming in Minecraft](0007.png)*A player farming in Minecraft*
 
@@ -87,9 +89,9 @@ In order to survive, players would quickly find that they would need to eat, sle
 ***
 The first intuitive observation from the three games is that the player is placed in an open environment – sometimes after a brief introduction of background story while sometimes not – and provided with a set of approaches to interact with the surroundings. It’d be natural to conclude a first non-negotiable convention of open-world games: `providing a free-roaming and interactive environment`.
 
-Also in the rhetorical analysis of each sample, it's noted that all of them try  `creating an immersive entertainment experience` for the players, so this should be the second non-negotiable convention.
+Also in the rhetorical analysis of each sample, it's noted that all of them try  `creating an immersive entertaining experience` for the players, so this should be the second non-negotiable convention.
 
-Thirdly, this virtual environment should be `scaled right for players to travel and interact`. So that the environment can contain enough spatial elements to form the landscape of a world, while not being too strange in size.
+Thirdly, this virtual environment should be `scaled appropriately for players to travel and interact`. So that the environment can contain enough spatial elements to form the landscape of a world, while not being too strange in size.
 
 And since the three samples are different in whether to have quests, plots, NPCs, or even an ultimate goal, they're all negotiable.
 
@@ -100,11 +102,11 @@ All in all, video games are making pivotal influences in modern culture and is b
 ## Sources
 
 ***
-Take-Two Interactive. “Investor Presentation - August 2022.” *Q1 2023 Take-Two Interactive Software, Inc. Earnings Conference Call*, <http://ir.take2games.com/static-files/79bc5b0a-2091-483f-9ac5-aa4cab0a1cac>.
+Take-Two Interactive. “Investor Presentation - August 2022.” *Q1 2023 Take-Two Interactive Software, Inc. Earnings Conference Call*, 8 Aug. 2022 <http://ir.take2games.com/static-files/79bc5b0a-2091-483f-9ac5-aa4cab0a1cac>.
 
 IGN. “Verdict.” *The Legend of Zelda: Breath of the Wild Review*, 2 Mar. 2017, <https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review>.
 
-Duncan, S. C. *Minecraft beyond construction and survival. Well Played 1(1)* 1-22, 2011, <http://etc.cmu.edu/etcpress>.
+Duncan, Sean C. “Minecraft, Beyond Construction and Survival”. 23 Oct. 2019.
 
 Codex Gamicus. “History.” *Open-World Video Games*, <https://gamicus.fandom.com/wiki/Open-world_video_games#History>.
 
@@ -117,7 +119,7 @@ Savant, Bald. “Nonlinear Story Structure in Games.” *Blog of The Bald Savant
 ## Reflection
 
 ***
-When I'm composing open-world games, I will follow the points from the above analysis.
+When I compose these open-world games, I will be following the conventions from the above analysis.
 First, make sure to include all non-negotiable conventions: I will build a properly sized, interactive, and free-roaming open environment, and try to create an immersive gaming experience.
 In terms of world creation, I need to consider the following:
 

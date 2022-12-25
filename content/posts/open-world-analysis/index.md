@@ -20,6 +20,7 @@ resources:
 - alt: Farming in Minecraft
   src: 0007.png
 ---
+---
 
 ## This article has been revised and moved to my outcome page of ENGL 182, check [here](https://engl182.xsl.sh/).
 

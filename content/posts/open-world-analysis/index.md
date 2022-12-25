@@ -2,7 +2,7 @@
 layout: post
 tags: ["Game"]
 title: "A Brief Analysis of Open-world Games"
-date: 2022-11-01T03:33:28-07:00
+date: 2022-12-24T21:56:39-07:00
 draft: false
 resources:
 - alt: The roots and development of Open-world games
@@ -19,6 +19,10 @@ resources:
   src: 0006.png
 - alt: Farming in Minecraft
   src: 0007.png
+---
+
+## This article has been revised and moved to my outcome page of ENGL 182, check [here](https://engl182.xsl.sh/).
+
 ---
 
 ## Introduction

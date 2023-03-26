@@ -3,7 +3,7 @@ layout: post
 tags: ["Game"]
 title: "A Brief Analysis of Open-world Games"
 date: 2022-12-24T21:56:39-07:00
-draft: false
+draft: true
 resources:
 - alt: The roots and development of Open-world games
   src: 0001.png

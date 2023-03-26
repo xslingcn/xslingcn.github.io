@@ -4,8 +4,8 @@
 <div class="terms-list">
     {{ $data := .Data }}
         {{ range .Data.Terms.ByCount }}
-        {{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
-        <a  class="btn-border-tags" href="{{ $termLink }}" title="{{ .Term }}">
+        {{ $termLink := printf "#//%s/%s/" $data.Plural .Term | urlize }}
+        <a  class="btn-border-tags route-push" href="{{ $termLink }}" title="{{ .Term }}">
             <i style="margin-bottom: 15px;" class="fa fa-tags">
               {{ .Term }}
          </i>
@@ -15,10 +15,10 @@
 
 <div style="margin-bottom: 60px;">
     {{ range .Data.Terms.ByCount }}
-        {{ $termLink := printf "/%s/%s/" $data.Plural .Term | urlize }}
+        {{ $termLink := printf "#//%s/%s/" $data.Plural .Term | urlize }}
         <ul class="terms-ul">
             <li class="terms-listing-seperator" id="{{ .Term }}">
-                <a class="term-link" href="{{ $termLink }}">
+                <a class="term-link route-push" href="{{ $termLink }}">
                     {{ .Term }}
                     <span class="term-count">{{ .Count }}</span>
                 </a>
@@ -26,11 +26,11 @@
             <ul>
                 {{ range .Pages | first 5 }}
                 <li class="term-enum">{{ .Date.Format "2006-01-02" }}
-                     <a class="term-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                     <a class="term-title route-push" href="{{ print "#" .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ end }}
                 {{ if gt (len .Pages) 5 }}
-                    <a href="{{ $termLink }}">……</a>
+                    <a class="route-push" href="{{ $termLink }}">……</a>
                 {{ end }}
             </ul>
         </ul>

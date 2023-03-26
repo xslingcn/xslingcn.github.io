@@ -24,13 +24,31 @@ paginatePath = "page"
   [[menu.main]]
     name = "Home"
     identifier = "home"
-    url = "https://xsl.sh/"
-    weight = 10
+    url = "/"
+    weight = 30
+    [menu.main.params]
+      changeRoute = false
   [[menu.main]]
     name = "Friends"
     identifier = "friends"
-    url = "https://xsl.sh/friends/"
+    url = "#/friends"
     weight = 20
+    [menu.main.params]
+      changeRoute = true
+  [[menu.main]]
+    name = "Tags"
+    identifier = "tags"
+    url = "#/tags"
+    weight = 15
+    [menu.main.params]
+      changeRoute = true
+  [[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    url = "#/blog"
+    weight = 10
+    [menu.main.params]
+      changeRoute = true
 
 [taxonomies]
     tag = "tags"

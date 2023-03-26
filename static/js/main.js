@@ -1,27 +1,45 @@
 $(document).ready(function () {
-  $("a.blog-button").click(function () {
-    // If already in blog, return early without animate overlay panel again.
-    if (location.hash && location.hash == "#blog") return;
-    if ($(".panel-cover").hasClass("panel-cover--collapsed")) return;
-    $(".main-post-list").removeClass("hidden");
-    currentWidth = $(".panel-cover").width();
-    if (currentWidth < 960) {
-      $(".panel-cover").addClass("panel-cover--collapsed");
-    } else {
-      $(".panel-cover").css("max-width", currentWidth);
-      $(".panel-cover").animate({ "max-width": "700px", width: "30%" }, 400, (swing = "swing"), function () {});
-    }
+  $(".panel-cover").on("click", "a.route-push", function () {
+    const realPath = $(this).attr("href").substring(2) == "blog" ? "" : $(this).attr("href").substring(2);
+
+    $(".content-wrapper__inner").load(realPath + "/index.html .content-wrapper__main, .footer", function () {
+      $(".main-post-list").removeClass("hidden");
+      collapsePanel();
+      activateScripts();
+    });
   });
 
-  if (window.location.hash && window.location.hash == "#blog") {
-    $(".panel-cover").addClass("panel-cover--collapsed");
-    $(".main-post-list").removeClass("hidden");
+  function collapsePanel() {
+    if (!$(".panel-cover").hasClass("panel-cover--collapsed")) {
+      currentWidth = $(".panel-cover").width();
+      if (currentWidth < 960) {
+        $(".panel-cover").addClass("panel-cover--collapsed");
+      } else {
+        $(".panel-cover").css("max-width", currentWidth);
+        $(".panel-cover").animate({ "max-width": "700px", width: "30%" }, 400, (swing = "swing"), function () {});
+      }
+    }
   }
 
-  if (window.location.pathname != "/") {
-    $(".panel-cover").addClass("panel-cover--collapsed");
-    $(".main-post-list").removeClass("hidden");
+  function activateScripts() {  
+    if (typeof MathJax !== "undefined") MathJax.typeset();
+    if (typeof gitalk != "undefined") gitalk.render("gitalk-container");
   }
+
+  $(".content-wrapper__inner").on("click", "a.route-push", function () {
+    const realPath = $(this).attr("href").substring(2);
+
+    if (realPath.startsWith("tags")) {
+      $(".content-wrapper__main").load(realPath + "/index.html", function () {
+        $(".main-post-list").removeClass("hidden");
+      });
+    } else
+      $("html, body").animate({ scrollTop: 0 }, "slow", function () {
+        $(".content-wrapper__main").load(realPath + "/index.html", function () { 
+          activateScripts();
+        });
+      });
+  });
 
   $(".btn-mobile-menu__icon").click(function () {
     if ($(".navigation-wrapper").css("display") == "block") {

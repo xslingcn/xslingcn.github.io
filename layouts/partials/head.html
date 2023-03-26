@@ -29,9 +29,9 @@
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
 
-    {{ if .Params.math }}
+    {{/*  {{ if .Params.math }}  */}}
     {{ partial "math.html" . }}
-    {{ end }}
+    {{/*  {{ end }}  */}}
 
     {{ if .Site.Params.comment.disqus }}
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqusjs.css" />

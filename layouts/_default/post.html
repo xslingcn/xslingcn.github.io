@@ -1,9 +1,9 @@
-{{ define "main" }}
+{{/*  {{ define "main" }}  */}}
 <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
         <div class="post-meta">
             <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700 " }}" itemprop="datePublished" class="post-meta__date date">{{ .Date.Format "2006-01-02" }}</time>
-            {{ with .Params.tags }} <span class="post-meta__tags tags"> {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} </span> {{ end }}
+            {{ with .Params.tags }} <span class="post-meta__tags tags"> {{ range . }}  • <a href="{{ printf "#/%s/%s" ("tags" | absURL) (. | urlize) }}">{{ . }}</a> {{ end }} </span> {{ end }}
         </div>
         <h1 class="post-title">{{ .Title }}</h1>
     </header>
@@ -13,4 +13,4 @@
 </article>
 {{ partial "read-more.html" . }} 
 {{ partial "comments.html" . }}
-{{ end }}
+{{/*  {{ end }}  */}}

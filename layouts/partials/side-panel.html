@@ -1,9 +1,9 @@
-<header id="panel-cover" class=" {{ if .IsHome }} panel-cover {{ else }} panel-cover panel-cover--collapsed {{ end }}">
+<header id="panel-cover" class="panel-cover">
   <script id="background-animator" type="text/javascript" src="/js/setBackGround.js"></script>
     <div class="panel-main">
       <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
-          <a href="/#blog" title="Homepage of {{ .Site.Title }} " class="blog-button"><img src="https://cdn.jsdelivr.net/npm/turna_assets@{{ .Site.Params.cdnVersion }}/img/xsl.sh/avatar.jpg" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /></a>
+          <a href="#/blog" title="Homepage of {{ .Site.Title }} " class="route-push"><img src="https://cdn.jsdelivr.net/npm/turna_assets@{{ .Site.Params.cdnVersion }}/img/xsl.sh/avatar.jpg" width="80" alt="{{ .Site.Title }} logo" class="panel-cover__logo logo" /></a>
           <h1 class="panel-cover__title panel-title"><a href="/#blog" title="Homepage of {{ .Site.Title }}" class="blog-button">{{ .Site.Title }}</a></h1>
           <hr class="panel-cover__divider" />
           {{ if (.Site.Params.subTitle) }}
@@ -13,9 +13,8 @@
             <div>
               <nav class="cover-navigation cover-navigation--primary">
                 <ul class="navigation">
-                  <li class="navigation__item"><a href="/#blog" title="{{ .Site.Params.blogButton.Title }}" class="blog-button">{{ .Site.Params.blogButton.Title }}</a></li>
                   {{ range .Site.Menus.main }}
-                    <li class="navigation__item"><a href="{{ .URL }}" title="{{ .Name}}">{{ .Name }}</a></li>
+                    <li class="navigation__item"><a href="{{ .URL }}" title="{{ .Name}}" class="{{ if eq .Params.changeRoute true }}route-push{{ end }}">{{ .Name }}</a></li>
                   {{ end }}
                 </ul>
               </nav>

@@ -33,7 +33,7 @@ paginatePath = "page"
 [params]
 author = "Xsling"
 subtitle = "Oh What a World!"
-cdnVersion = "1.1.9"
+cdnVersion = "1.1.10"
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = "xsling"

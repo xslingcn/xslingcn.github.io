@@ -10,4 +10,7 @@ friends:
   - name: "Nyaacinth"
     avatar: "https://nyaacinth.moe/avatar_hu839f0532313c814210ea418f7f696c85_21929_300x0_resize_q75_box.jpg"
     url: "https://nyaacinth.moe/"
+  - name: "Chariri"
+    avatar: "https://avatars.githubusercontent.com/u/6622592?v=4"
+    url: "https://chariri.moe/"
 ---

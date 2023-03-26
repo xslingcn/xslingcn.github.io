@@ -1,18 +1,18 @@
-{{/*  {{ define "main" }}  */}}
-<div class="main-post-list hidden">
+{{ define "main" }}
+<div class="main-post-list">
     <ol class="post-list">
         {{ range .Paginator.Pages }}
         <li>
-            <h2 class="post-list__post-title post-title"><a href="{{ print "#" .RelPermalink }}" title="To {{ .RelPermalink }}" class="route-push">{{ .Title }}</a></h2>
+            <h2 class="post-list__post-title post-title"><a href="{{ print "/#" .RelPermalink }}" title="To {{ .RelPermalink }}" class="route-push">{{ .Title }}</a></h2>
             <p class="excerpt">{{ .Summary | truncate 250 }}&hellip;</p>
             <div class="post-list__meta">
                 <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700 " }}" class="post-list__meta--date date">{{ .Date.Format "2006-01-02" }}</time>
-                {{ with .Params.tags }} <span class="post-list__meta--tags tags"> {{ range . }}  • <a href="{{ print "#/tags/" . | urlize }}" class="route-push">{{ . }}</a> {{ end }} </span> {{ end }}
-                <a class="btn-border-small route-push" href="{{ print "#" .RelPermalink }}">{{ T "continue" }}</a></div>
+                {{ with .Params.tags }} <span class="post-list__meta--tags tags"> {{ range . }}  • <a href="{{ print "/#/tags/" . | urlize }}" class="route-push">{{ . }}</a> {{ end }} </span> {{ end }}
+                <a class="btn-border-small route-push" href="{{ print "/#" .RelPermalink }}">{{ T "continue" }}</a></div>
             <hr class="post-list__divider" />
         </li>
         {{ end }}
     </ol>
     {{ partial "pagination.html" . }}
 </div>
-{{/*  {{ end }}  */}}
+{{ end }}

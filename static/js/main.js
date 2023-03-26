@@ -1,14 +1,32 @@
 $(document).ready(function () {
-  $(".panel-cover").on("click", "a.route-push", function () {
+  $(".panel-cover").on("click", "a.route-push", function (e) {
+    e.preventDefault();
     destroyObjects();
-    const realPath = $(this).attr("href").substring(2) == "blog" ? "" : $(this).attr("href").substring(2);
+    const realPath = $(this).attr("href").substring(2) == "/blog" ? "" : $(this).attr("href").substring(2);
 
+    loadContentAndCollapsePanel(realPath);
+  });
+
+  $(".content-wrapper__inner").on("click", "a.route-push", function (e) {
+    e.preventDefault();
+    destroyObjects();
+    const realPath = $(this).attr("href").substring(2);
+
+    if (realPath.startsWith("tags")) {
+      loadContentAndCollapsePanel(realPath);
+    } else {
+      $("html, body").animate({ scrollTop: 0 }, "slow", loadContentAndCollapsePanel(realPath));
+    }
+  });
+
+  function loadContentAndCollapsePanel(realPath) {
     $(".content-wrapper__inner").load(realPath + "/index.html .content-wrapper__main, .footer", function () {
       $(".main-post-list").removeClass("hidden");
       collapsePanel();
-      activateScripts();
+      activateScripts(realPath);
+      updateState(realPath);
     });
-  });
+  }
 
   function collapsePanel() {
     if (!$(".panel-cover").hasClass("panel-cover--collapsed")) {
@@ -22,30 +40,39 @@ $(document).ready(function () {
     }
   }
 
-  function activateScripts() {  
+  function updateState(realPath) {
+    $.get(realPath + "/index.html", function (data) {
+      const content = $("<head>").html(data);
+      const title = content.find("title");
+      if (title.length) {
+        document.title = title.text();
+      }
+      history.pushState(null, title.length ? title.text : null, "/#" + (realPath == "" ? "/blog" : realPath));
+    });
+  }
+
+  function activateScripts(realPath) {
     if (typeof MathJax !== "undefined") MathJax.typeset();
-    if (typeof gitalk != "undefined") gitalk.render("gitalk-container");
+    $.get(realPath + "/index.html", function (data) {
+      const content = $(data).find("#gitalk-container");
+      const scripts = content.filter("script");
+
+      $(".post-comments").html(content);
+
+      scripts.each(function () {
+        eval($(this).text());
+      });
+    });
   }
 
   function destroyObjects() {
     if (typeof gitalk != "undefined") gitalk = undefined;
   }
 
-  $(".content-wrapper__inner").on("click", "a.route-push", function () {
-    destroyObjects();
-    const realPath = $(this).attr("href").substring(2);
-
-    if (realPath.startsWith("tags")) {
-      $(".content-wrapper__main").load(realPath + "/index.html", function () {
-        $(".main-post-list").removeClass("hidden");
-      });
-    } else
-      $("html, body").animate({ scrollTop: 0 }, "slow", function () {
-        $(".content-wrapper__main").load(realPath + "/index.html", function () { 
-          activateScripts();
-        });
-      });
-  });
+  if (location.hash) {
+    const realPath = location.hash.substring(1);
+    loadContentAndCollapsePanel(realPath);
+  }
 
   $(".btn-mobile-menu__icon").click(function () {
     if ($(".navigation-wrapper").css("display") == "block") {

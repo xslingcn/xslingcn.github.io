@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $(".panel-cover").on("click", "a.route-push", function () {
+    destroyObjects();
     const realPath = $(this).attr("href").substring(2) == "blog" ? "" : $(this).attr("href").substring(2);
 
     $(".content-wrapper__inner").load(realPath + "/index.html .content-wrapper__main, .footer", function () {
@@ -26,7 +27,12 @@ $(document).ready(function () {
     if (typeof gitalk != "undefined") gitalk.render("gitalk-container");
   }
 
+  function destroyObjects() {
+    if (typeof gitalk != "undefined") gitalk = undefined;
+  }
+
   $(".content-wrapper__inner").on("click", "a.route-push", function () {
+    destroyObjects();
     const realPath = $(this).attr("href").substring(2);
 
     if (realPath.startsWith("tags")) {

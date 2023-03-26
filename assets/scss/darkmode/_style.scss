@@ -83,12 +83,15 @@ pre {
 .read-more-item-dim {
     color: darken($primary-color,10%);
 }
-textarea{
+textarea {
   color: $secondary-color-dark;
 }
-blockquote{
+blockquote {
     color: #768390;
     border-left: 0.25em solid #444C56;
+}
+.friend-container-single {
+    background-color: #1c2128;
 }
 
 // ------------------------------

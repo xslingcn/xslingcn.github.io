@@ -26,6 +26,11 @@ paginatePath = "page"
     identifier = "home"
     url = "https://xsl.sh/"
     weight = 10
+  [[menu.main]]
+    name = "Friends"
+    identifier = "friends"
+    url = "https://xsl.sh/friends/"
+    weight = 20
 
 [taxonomies]
     tag = "tags"
@@ -70,3 +75,4 @@ license_link = 'http://creativecommons.org/licenses/by-nc-sa/4.0/'
 
 [permalinks]
 posts = "/:year/:month/:filename/"
+static = "/:filename/"

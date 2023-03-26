@@ -1,0 +1,18 @@
+{{ define "main" }}
+<header>
+  <h1>{{ .Title }}</h1>
+</header>
+
+<section class="friends">
+  <div class="friend-container">
+    {{ range .Params.friends }}
+    <div class="friend-container-single">
+      <a class="friend-avatar-link" href="{{ .url }}" target="_blank">
+        <img class="friend-avatar-img" src="{{ .avatar }}" alt="{{ .name }}_Avatar" />
+      </a>
+      <div class="friend-name">{{ .name }}</div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ partial "comments.html" . }} {{ end }}

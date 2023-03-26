@@ -18,12 +18,7 @@ $(document).ready(function () {
     $(".main-post-list").removeClass("hidden");
   }
 
-  if (window.location.pathname.substring(0, 6) == "/tags/") {
-    $(".panel-cover").addClass("panel-cover--collapsed");
-    $(".main-post-list").removeClass("hidden");
-  }
-
-  if (window.location.pathname.substring(0, 6) == "/page/") {
+  if (window.location.pathname != "/") {
     $(".panel-cover").addClass("panel-cover--collapsed");
     $(".main-post-list").removeClass("hidden");
   }
@@ -42,7 +37,7 @@ $(document).ready(function () {
   });
 
   $(".navigation-wrapper .blog-button").click(function () {
-    if ($(".navigation-wrapper").css("display") == "block") {
+    if ($(".navigation-wrapper").css("display") == "block" && window.location.pathname == "/" && !window.location.hash) {
       $(".navigation-wrapper").on("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
         $(".navigation-wrapper").toggleClass("visible animated bounceOutUp");
         $(".navigation-wrapper").off("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend");

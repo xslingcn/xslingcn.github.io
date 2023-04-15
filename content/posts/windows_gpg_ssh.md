@@ -16,7 +16,7 @@ draft: false
 
 (*如已完成可直接跳过*)
 
- ```powershell
+ ```
 PS C:\Users\xsling> gpg --expert --edit-key me@xsl.sh
 gpg (GnuPG) 2.4.0; Copyright (C) 2021 g10 Code GmbH
 This is free software: you are free to change and redistribute it.
@@ -30,7 +30,7 @@ sec  rsa4096/<*10-digits-hex-id*>
 [ultimate] (1). xsling <me@xsl.sh>
  ```
 
-在gpg命令行中输入：
+添加秘钥：
 
 ```
 gpg> addkey
@@ -129,7 +129,7 @@ gpg> save
 
 此时可以检查我们生成的秘钥：
 
-```powershell
+```
 PS C:\Users\xsling> gpg --list-key
 C:\Users\xsling\AppData\Roaming\gnupg\pubring.kbx
 -------------------------------------------------
@@ -139,7 +139,7 @@ uid           [ultimate] xsling <me@xsl.sh>
 sub   rsa4096 YYYY-MM-DD [A]
 ```
 
-随后的`sub rsa4096 YYYY-MM-DD [A]`即是我们将用来验证的秘钥。
+其中`sub rsa4096 YYYY-MM-DD [A]`即是我们将用来验证的秘钥。
 
 ## 开启GnuPG SSH支持
 
@@ -164,7 +164,7 @@ gpg --list-keys --with-keygrip
 
 获取秘钥的`keygrip`：
 
-```powershell
+```
 PS C:\Users\xsling> gpg --list-keys --with-keygrip
 C:\Users\xsling\AppData\Roaming\gnupg\pubring.kbx
 -------------------------------------------------
@@ -184,13 +184,13 @@ C0892B3E6BA886395CDF4364FD891C19C8F508B9
 
 然后我们将`SSH_AUTH_SOCK`环境变量设置为`\\.\pipe\openssh-ssh-agent`
 
-```powershell
+```
 PS C:\Users\xsling> $env:SSH_AUTH_SOCK="\\.\pipe\openssh-ssh-agent"
 ```
 
 最后重启`gpg-agent`：
 
-```powershell
+```
 PS C:\Users\xsling> gpg-connect-agent killagent /bye
 OK closing connection
 PS C:\Users\xsling> gpg-connect-agent /bye
@@ -201,14 +201,14 @@ gpg-connect-agent: connection to the agent established
 
 此时使用`ssh-add -L`获取所有可用的公钥，`gpg-agent`应该已经能正确地提供我们的验证信息。
 
-```powershell
+```
 PS C:\Users\xsling> ssh-add -L
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/dwiO9tT1bSPzGRepnwftCczf...*public-key-omitted*...ZbeVRr4olZHjI6zrCyWpIN6xN5SZdWBWVrV (none)
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABczf...*public-key-omitted*...ZbeVRr4olZHjI6zrCyWpIN6xN5SZdWBWVrV (none)
 ```
 
 将以上内容复制到`Github`、`Gitlab`、`authorized_keys`... 即可进行测试：
 
-```powershell
+```
 PS C:\Users\xsling> ssh -T git@gitlab.cs.washington.edu
 Welcome to GitLab, @shanlx!
 ```

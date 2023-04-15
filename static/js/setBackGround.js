@@ -12,19 +12,14 @@
     videoEl.setAttribute("class", "background-video");
     videoEl.setAttribute("autoplay", "autoplay");
     videoEl.setAttribute("muted", "muted");
-
-    var source = document.createElement("source");
-    source.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/video/xsl.sh/ottoai.webm");
-    source.setAttribute("type", 'video/webm;codecs="vp8, vorbis"');
+    videoEl.setAttribute("src", "https://cdn.jsdelivr.net/npm/turna_assets@1.1.9/video/xsl.sh/ottoai.webm");
 
     panelCover.insertBefore(backgroundImgEl, panelCover.firstChild);
 
     panelCover.appendChild(videoEl);
-    videoEl.appendChild(source);
 
     videoEl.addEventListener("canplay", function () {
       videoEl.muted = true;
-
       videoEl.play();
       panelCover.removeChild(backgroundImgEl);
     });

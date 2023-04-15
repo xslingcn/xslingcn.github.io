@@ -15,7 +15,9 @@ $(document).ready(function () {
     if (realPath.startsWith("tags")) {
       loadContentAndCollapsePanel(realPath);
     } else {
-      $("html, body").animate({ scrollTop: 0 }, "slow", loadContentAndCollapsePanel(realPath));
+      $("html, body").animate({ scrollTop: 0 }, "fast", function () {
+        loadContentAndCollapsePanel(realPath);
+      });
     }
   });
 

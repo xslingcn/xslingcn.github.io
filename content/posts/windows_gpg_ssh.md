@@ -1,14 +1,16 @@
 ---
 layout: post
-tags: ["Say Hi","Vno"]
+tags: ["技术","Ops"]
 title: "在Windows中使用GPG验证SSH连接"
 date: 2023-04-14T22:07:33-07:00
-draft: true
+draft: false
 ---
 
 ## 这是什么？
 
-`GnuPG`在近期的2.4.0 Release中添加了对`Win32-OpenSSH`的原生支持，这也被包含在[Gpg4win 4.1.0](https://lists.wald.intevation.org/pipermail/gpg4win-announce/2022/000099.html)中。这意味着我们可以在最新版本的Gpg4win中直接启用对SSH验证的支持，不再需要[wsl-ssh-pageant](https://github.com/benpye/wsl-ssh-pageant)转接。搜了一圈没有看到对应这一特性的教程，在这里总结一下配置的过程。
+`GnuPG`在近期的2.4.0 Release中添加了对`Win32-OpenSSH`的原生支持，这也被包含在[Gpg4win 4.1.0](https://lists.wald.intevation.org/pipermail/gpg4win-announce/2022/000099.html)中。这意味着我们可以在最新版本的`Gpg4win`中直接启用对SSH验证的支持，不再需要[wsl-ssh-pageant](https://github.com/benpye/wsl-ssh-pageant)转接。找了一圈没有看到对应这一特性的教程，在这里简单总结一下配置的过程。
+
+本文假定你已经创建了主秘钥，如没有，你可以参考[这篇教程](https://docs.github.com/zh/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)。
 
 ## 创建验证子秘钥
 
@@ -30,13 +32,13 @@ sec  rsa4096/<*10-digits-hex-id*>
 
 在gpg命令行中输入：
 
-```powershell
+```
 gpg> addkey
 ```
 
 选择`RSA (set your own capabilities)`：
 
-```powershell
+```
 Please select what kind of key you want:
    (3) DSA (sign only)
    (4) RSA (sign only)
@@ -51,13 +53,13 @@ Please select what kind of key you want:
   (14) Existing key from card
 ```
 
-```powershell
+```
 Your selection? 8
 ```
 
 由于仅将该子秘钥用于验证，我们开启`Authenticate`功能，关闭`Sign`和`Encrypt`：
 
-```powershell
+```
 Possible actions for this RSA key: Sign Encrypt Authenticate
 Current allowed actions: Sign Encrypt
 
@@ -101,7 +103,7 @@ Your selection? Q
 
 输入秘钥长度，这里设置为`4096`：
 
-```powershell
+```
 RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (3072) 4096
 Requested keysize is 4096 bits
@@ -109,7 +111,7 @@ Requested keysize is 4096 bits
 
 设置秘钥的过期时间，这里设置为一个月`1m`：
 
-```powershell
+```
 Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
@@ -121,7 +123,7 @@ Key is valid for? (0) 1m
 
 然后确认，并保存退出即可：
 
-```powershell
+```
 gpg> save
 ```
 
@@ -156,7 +158,7 @@ enable-win32-openssh-support
 
 然后我们执行：
 
-```powershell
+```
 gpg --list-keys --with-keygrip
 ```
 
@@ -176,7 +178,7 @@ sub   rsa4096 YYYY-MM-DD [A]
 
 此处的`C0892B3E6BA886395CDF4364FD891C19C8F508B9`就是我们需要的内容。将其粘贴到`sshcontrol`文件中，使其内容包含：
 
-```powershell
+```
 C0892B3E6BA886395CDF4364FD891C19C8F508B9
 ```
 

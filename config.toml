@@ -94,3 +94,8 @@ license_link = 'http://creativecommons.org/licenses/by-nc-sa/4.0/'
 [permalinks]
 posts = "/:year/:month/:filename/"
 static = "/:filename/"
+
+[sitemap]
+  changefreq = 'always'
+  filename = 'sitemap.xml'
+  priority = 0.5

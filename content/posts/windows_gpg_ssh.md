@@ -182,6 +182,9 @@ sub   rsa4096 YYYY-MM-DD [A]
 C0892B3E6BA886395CDF4364FD891C19C8F508B9
 ```
 
+>注意：这里的坑在于，我们必须在`keygrip`后面添加一个换行符为`LF`的空行，否则`gpg-agent`无法正确地读取秘钥列表。
+>你可以使用`VSCode`等编辑器切换换行符。
+
 然后我们将`SSH_AUTH_SOCK`环境变量设置为`\\.\pipe\openssh-ssh-agent`
 
 ```

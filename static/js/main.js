@@ -44,12 +44,13 @@ $(document).ready(function () {
 
   function updateState(realPath) {
     $.get(realPath + "/index.html", function (data) {
-      const content = $("<head>").html(data);
-      const title = content.find("title");
-      if (title.length) {
-        document.title = title.text();
-      }
-      history.pushState(null, title.length ? title.text : null, "/#" + (realPath == "" ? "/blog" : realPath));
+      const head = $("<head>").html(data);
+
+      const titleAndMetaTags = head.find("title, meta");
+      $("head title, head meta").remove();
+      $("head").append(titleAndMetaTags);
+
+      history.pushState(null, document.title, "/#" + (realPath == "" ? "/blog" : realPath));
     });
   }
 

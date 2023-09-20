@@ -20,7 +20,7 @@ resources:
 最近在着手装一台新的Homelab，网络方面用到了`HPE 544+FLR`这张卡。由于芯片组（`ConnectX-3 Pro`）较老，资源与文档相对分散和零碎，在此记录一下配置的过程，以便不时引阅之用。
 
 ## 驱动？
-NVIDIA为此芯片组提供的[官方OFED](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)只支持到`Debian 10.0`，不能直接在PVE8（Debian12）上安装。所幸所需的驱动被包含在Linux内核中(`mlx4_core`)，且我们可以使用`MFT`包进行配置以让网卡正常运作。
+Mellanox为此芯片组提供的[OFED](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)只支持到`Debian 10.0`，不能直接在PVE8（Debian12）上安装。所幸所需的驱动被包含在Linux内核中(`mlx4_core`)，且我们可以使用`MFT`包进行配置以让网卡正常运作。
 
 ![ConnectX-3 Pro芯片组只能使用MLNX_OFED 4.9-x LTS驱动](0001.png)*ConnectX-3 Pro芯片组只能使用MLNX_OFED 4.9-x LTS驱动*
 ![MLNX_OFED 4.9-x LTS只支持到Debian 10.0](0002.png)*MLNX_OFED 4.9-x LTS只支持到Debian 10.0*

@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: ["技术","DevOps"]
-title: "在PVE8中使用HPE 544+FLR"
+title: "在PVE8中使用HPE 544+FLR(ConnectX-3 Pro)"
 date: 2023-09-19T21:20:08-07:00
 draft: false
 resources:

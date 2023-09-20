@@ -20,13 +20,13 @@ resources:
 最近在着手装一台新的Homelab，网络方面用到了`HPE 544+FLR`这张卡。由于芯片组（`ConnectX-3 Pro`）较老，资源与文档相对分散和零碎，在此记录一下配置的过程，以便不时引阅之用。
 
 ## 驱动？
-Mellanox为此芯片组提供的[OFED](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)只支持到`Debian 10.0`，不能直接在PVE8（Debian12）上安装。所幸所需的驱动被包含在Linux内核中(`mlx4_core`)，且我们可以使用`MFT`包进行配置以让网卡正常运作。
+在查找官方支持时，发现Mellanox为此芯片组提供的[OFED](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)只支持到`Debian 10.0`，不能直接在PVE8（`Debian 12`）上安装。
 
-![ConnectX-3 Pro芯片组只能使用MLNX_OFED 4.9-x LTS驱动](0001.png)*ConnectX-3 Pro芯片组只能使用MLNX_OFED 4.9-x LTS驱动*
-![MLNX_OFED 4.9-x LTS只支持到Debian 10.0](0002.png)*MLNX_OFED 4.9-x LTS只支持到Debian 10.0*
+![ConnectX-3 Pro芯片组只能使用MLNX_OFED 4.9-x LTS驱动](/2023/09/pve8-hpe-544-flr/0001.png)
+![MLNX_OFED 4.9-x LTS只支持到Debian 10.0](/2023/09/pve8-hpe-544-flr/0002.png)
 
-首先下载安装MFT包。进入这个[地址](https://network.nvidia.com/products/adapter-software/firmware-tools/)，找到要下载的版本并安装。
-![找到要下载的MFT包](0003.png)*找到要下载的MFT包*
+但所幸驱动本身被包含在Linux内核中(`mlx4_core`)，且我们可以使用`NVIDIA Firmware Tools(MFT)`包进行配置以让网卡正常运作。首先下载安装`MFT`。进入这个[地址](https://network.nvidia.com/products/adapter-software/firmware-tools/)，找到要下载的版本并安装。
+![找到要下载的MFT包](/2023/09/pve8-hpe-544-flr/0003.png)
 
 ```
 root@pve:~# wget https://www.mellanox.com/downloads/MFT/mft-4.25.0-62-x86_64-deb.tgz
@@ -114,11 +114,11 @@ root@pve:~# ip link show
 
 ## 创建虚拟网桥
 进入PVE网络配置界面，创建`Linux Bridge`，设置静态地址、桥接端口后，应用配置即可。这一步亦可通过编辑`/etc/network/interfaces`达成。
-![PVE配置虚拟网桥](0004.png)*PVE配置虚拟网桥*
+![PVE配置虚拟网桥](/2023/09/pve8-hpe-544-flr/0004.png)
 
 然后将虚拟机网卡桥接到虚拟网桥即可。
 
-![桥接虚拟机网卡](0005.png)*桥接虚拟机网卡*
+![桥接虚拟机网卡](/2023/09/pve8-hpe-544-flr/0005.png)
 最后我们可以通过`ethtool`确认接口的运行情况：
 
 ```

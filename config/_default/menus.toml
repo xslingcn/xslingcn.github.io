@@ -7,7 +7,7 @@
 [[main]]
     identifier = "publications"
     name = "Publications"
-    url = "/publications"
+    url = "#"
     weight = 2
 
 [[main]]

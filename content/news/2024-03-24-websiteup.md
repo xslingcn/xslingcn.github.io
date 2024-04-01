@@ -8,4 +8,4 @@ categories:
 tags:
   - Frontend
 ---
-This site is up! I've customized the amazing [Lowkey Hugo Theme](https://github.com/nixentric/Lowkey-Hugo-Theme) specifically for academic showcase uses. It's also released [here](https://github.com/xslingcn/Lowkey-Academic-Hugo).
+This site is up! I've customized the amazing [Lowkey Hugo Theme](https://github.com/nixentric/Lowkey-Hugo-Theme) specifically for academic showcase uses. Check it out [here](https://github.com/xslingcn/Lowkey-Academic-Hugo).
